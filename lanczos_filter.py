@@ -61,13 +61,11 @@ class lanczos:
 
         # 1. Creamos el filtro de paso bajo para frecuencias rápidas
         W_rapido = self.pesos_lanczos_pasobajo(
-            self.N, 
             self.fc_rapida
         )
 
         # 2. Creamos el filtro de paso bajo para frecuencias muy lentas
         W_lento = self.pesos_lanczos_pasobajo(
-            self.N, 
             self.fc_lenta
         )
 
@@ -80,7 +78,7 @@ class lanczos:
             W_pasabanda, 
             mode='valid'
         )
-
+ 
         return data_filtrado
 
         # # Para poder graficarlo alineado con la señal original, rellenamos los bordes perdidos con NaN
